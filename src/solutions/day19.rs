@@ -6,6 +6,7 @@ use std::collections::HashMap;
 use std::fs::File;
 use std::io::prelude::*;
 
+#[allow(dead_code)]
 enum Parser {
     ParseA,
     ParseB,
@@ -142,6 +143,7 @@ corresponds to "any number (at least 1) of 42s", while
 corresponds to "any numbers (at least 1) of 42s, followed by the same number of 31s".
 We can easily encode these directly with the Parser::Many variant, which I've added to the enum
 */
+#[allow(dead_code)]
 fn solve_part_2(info: PuzzleInfo) -> usize {
     let PuzzleInfo {
         mut parsers,
@@ -163,6 +165,7 @@ fn solve_part_2(info: PuzzleInfo) -> usize {
         .count()
 }
 
+#[allow(dead_code)]
 pub fn part_2() -> usize {
     let info = read_file();
     solve_part_2(info)
